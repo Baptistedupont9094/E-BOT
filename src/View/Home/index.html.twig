@@ -1,16 +1,151 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-	<h1>Hello Wilder !</h1>
 
-	{% for item in 0..3 %}
-		<div class="row">
-			{% for i in 0..5 %}
-				<div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4 hover07">
-					{% include "Component/_card.html.twig" %}
-				</div>
-			{% endfor %}
+	<div class="d-flex  flex-column align-items-center justify-content-center" style="height: calc(68vh + 5px);">
+
+
+		<h1>laaaaaaaaalalallalalalalalalala</h1>
+		<p>Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour vous abonner ou réactiver votre abonnement.</p>
+
+		<div class="input-group col-4 mb-3">
+			<div class="input-group-append ">
+			<input type="text" class="form-control">
+				<button class="btn btn-outline-secondary" type="button">Button</button>
+			</div>
 		</div>
-	{% endfor %}
+	</div>
+
+
+	<hr class="separator">
+	<div class="video-container">
+		<video autoplay loop="true">
+			<source type="video/mp4" src="/assets/images/Binary_numbers_bg_01_Videvo (convert-video-online.com).mp4">
+		</video>
+		<div class="overlay">
+			<h1>Films, séries TV et bien plus en illimité.
+			</h1>
+		</div>
+	</div>
+	<hr class="separator">
+
+	<div
+		class="card-home row mx-0 p-5">
+		{# {% for movie in movieType %} #}
+		{% for movie in 1..1 %}
+			<div class="col-7">
+				<p>lalalalalalalalalalalalaal</p>
+			</div>
+			<div class="col-3 offset-1">
+				{% include "Component/_card_home.html.twig" %}
+
+			</div>
+		{% endfor %}
+	</div>
+	<hr class="separator">
+
+	<div
+		class="card-home row mx-0 p-5 ">
+		{# {% for movie in movieType %} #}
+		{% for movie in 1..1 %}
+			<div class="col-3 offset-2">
+				{% include "Component/_card_home.html.twig" %}
+
+			</div>
+		{% endfor %}
+	</div>
+	<hr class="separator">
+
+	<div
+		class="card-home row mx-0 p-5">
+		{# {% for movie in movieType %} #}
+		{% for movie in 1..1 %}
+			<div class="col-7"></div>
+			<div class="col-3 offset-1">
+				{% include "Component/_card_home.html.twig" %}
+
+			</div>
+		{% endfor %}
+	</div>
+
+	<style>
+		.card-home {
+			background-color: black;
+		}
+
+		.video-container {
+			position: relative;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			height: 200px;
+			overflow: hidden;
+
+
+		}
+		.separator {
+			height: 5px;
+			background-color: black;
+			margin: 0;
+			border-top: 1px solid grey;
+			border-bottom: 1px solid grey;
+
+		}
+		.video-container video {
+			/* Make video to at least 100% wide and tall */
+			min-width: 100%;
+			min-height: 100%;
+
+			/* Setting width & height to auto prevents the browser from stretching or squishing the video */
+			width: auto;
+			height: auto;
+
+			/* Center the video */
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.overlay {
+			background-image: linear-gradient(to bottom right,#002f4bdc,#dc4225dc);
+
+
+			position: relative;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			box-sizing: border-box;
+			padding: 5% 32px;
+			line-height: 1.5;
+			text-align:center;:last-child {
+				margin-bottom: 0;
+			}
+			h1 {
+				font-size: 32pt;
+				font-weight: bold;
+				text-shadow: 0 0 0.3em #000;
+				margin: 0 0 1em;
+			}
+			p {
+				font-size: 11pt;
+				text-shadow: 0 0 0.3em #000;
+				margin: 1em 0;
+			}
+			a {
+				color: #fff;
+			}
+		}
+
+
+		body {
+
+			color: #fff;
+			font-family: 'Oxygen', sans-serif;
+		}
+	</style>
 
 {% endblock %}
