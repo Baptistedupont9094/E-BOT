@@ -1,5 +1,16 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Hello Wilder !</h1>
+	<h1>Hello Wilder !</h1>
+
+	{% for item in 0..3 %}
+		<div class="row">
+			{% for i in 0..5 %}
+				<div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4 hover07">
+					{% include "Component/_card.html.twig" %}
+				</div>
+			{% endfor %}
+		</div>
+	{% endfor %}
+
 {% endblock %}
