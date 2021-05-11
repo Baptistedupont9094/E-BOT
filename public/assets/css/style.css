@@ -1,6 +1,46 @@
-body{
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('https://cdn.discordapp.com/attachments/841598092872777728/841598271335825418/alien-4852662_1920.jpg');
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.discordapp.com/attachments/841598092872777728/841598271335825418/alien-4852662_1920.jpg");
+}
+
+.card-text-effects {
+  box-shadow: 4px 4px 4px black;
+}
+
+.text-title-size {
+  font-size: min(calc(10% + 2vh + 2vw), 32px);
+}
+
+.text-body-size {
+  font-size: min(calc(10% + 1vh + 1vw), 18px);
+}
+
+.hover07 .card {
+    -webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+
+.hover07 .card:hover {
+    box-shadow: 8px 8px 8px black;
+}
+
+.hover07 .card img {
+	-webkit-filter: blur(1px) grayscale(30%) saturate(50%);
+	filter: blur(1px) grayscale(30%) saturate(50%);
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+
+.hover07 .card:hover img {
+	-webkit-filter: blur(0);
+	filter: blur(0);
+}
+
+.hover07 .card:hover div p, .hover07 .card:hover div h5 {
+	-webkit-transform: translate(-15%, 20px) scale(.9);
+	transform: translate(-15%, 20px) scale(.9);
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
 }
