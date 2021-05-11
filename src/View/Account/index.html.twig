@@ -1,5 +1,61 @@
-{% extends 'layout.html.twig' %}
+{# <section>
 
+<title>Bootstrap Theme Simply Me</title>
+<h3>Who Am I?</h3>
+<img url('https://cdn.discordapp.com/attachments/841595348140687373/841634318492631050/wall-e.jpeg');
+
+<h3>I'm an adventurer</h3>
+
+<div class="container-fluid">
+  <h3>Who Am I?</h3>
+  <img url('https://cdn.discordapp.com/attachments/841595348140687373/841634318492631050/wall-e.jpeg');
+  <h3>I'm an adventurer</h3>
+</div>
+
+</section> #}
+
+{% extends 'layout.html.twig' %}
 {% block content %}
-    <h1>Hello Wilder !</h1>
+
+  <style>
+  .bg-1 {
+    background-color: #1abc9c66; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 {
+    background-color: #474e5d66; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 {
+    background-color: #ffffff66; /* White */
+    color: #222;
+
+  }
+  
+.container-fluid {
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
+</style> 
+
+<body>
+
+<div class="container-fluid bg-1 text-center">
+  <h3>Who Am I?</h3>
+  <img src="assets/images/walle-top_0.jpg" class="img-circle" alt="wall-e" width="25%">
+  <h3>I'm an Wall-e</h3>
+</div>
+
+<div class="container-fluid bg-2 text-center">
+  <h3>What Am I?</h3>
+  <p>LorLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+</div>
+
+<div class="container-fluid bg-3 text-center">
+  <h3>Where To Find Me?</h3>
+  <p>Lorem ipsum..</p>
+</div>
+
+</body> 
+
 {% endblock %}
