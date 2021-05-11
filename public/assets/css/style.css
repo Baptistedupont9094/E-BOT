@@ -45,6 +45,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("/assets/images/wall-e.jpeg");
+  max-height: 60vh;
 }
 
 .card-text-effects {
@@ -99,55 +100,6 @@ input {
   border: none !important;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
     0 0 8px rgba(102, 175, 233, 0.6) !important;
-}
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400);
-html,
-.signin,
-.signin-submit {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-  padding: 0.6em 1.5em;
-  position: absolute;
-  right: 0;
-  z-index: 3;
-  font-family: "Montserrat";
-  overflow-x: hidden;
-  border-radius: 4px;
-}
-
-.active .signin {
-  display: none;
-}
-
-.signin:hover {
-  animation: hover-1 0.5s 1 both;
-}
-
-@keyframes hover-1 {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-    background-color: #fff;
-  }
-  100% {
-    background-color: #e50914;
-  }
-}
-
-.signinform {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 4;
-  padding-top: 10vh;
-  width: 250px;
-  transform: translateX(-50%) translateY(-50%);
 }
 
 /**********************************************/
