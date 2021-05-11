@@ -1,0 +1,10 @@
+<div class="accueil carousel d-none d-md-block">
+    <h1>Last updated movies</h1>
+	<div class="carousel-row">
+		{% for playlist in 1..3 %}
+			<div class="carousel-tile">
+				{% include "Component/_card_carousel.html.twig" %}
+            </div>
+		{% endfor %}
+	</div>
+</div>
