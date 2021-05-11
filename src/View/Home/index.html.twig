@@ -30,34 +30,34 @@
 	<hr class="separator">
 
 	<div
-		class="card-home row mx-0 p-5">
-		{# {% for movie in movieType %} #}
-		{% for movie in 1..1 %}
-			<div class="col-7">
-				<p>lalalalalalalalalalalalaal</p>
+		class="card-home row mx-0">
+			<div class= "col-3">
 			</div>
-			<div class="col-3 offset-1">
-				{% include "Component/_card_home.html.twig" %}
-
+			<div class="col-3 mt-5 vertical-align-center">
+				<h5>Made by humans.</h5>
+				<h1>Made for robots</h1>
 			</div>
-		{% endfor %}
+			<div class="col-3">
+			<div class="col-2">
+			</div>
+				<img src="/assets/images/Terminator-face.png">
+			</div>
+			<div class="col-1">
+			</div>
 	</div>
 	<hr class="separator">
 
 	<div
-		class="card-home row mx-0 p-5 ">
-		{# {% for movie in movieType %} #}
-		{% for movie in 1..1 %}
+		class="card-home row mx-0">
 			<div class="col-3 offset-2">
-				{% include "Component/_card_home.html.twig" %}
-
+				<img src="/assets/images/android.png">
 			</div>
-		{% endfor %}
+
 	</div>
 	<hr class="separator">
 
 	<div
-		class="card-home row mx-0 p-5">
+		class="card-home row mx-0">
 		{# {% for movie in movieType %} #}
 		{% for movie in 1..1 %}
 			<div class="col-7"></div>
@@ -71,6 +71,12 @@
 	<style>
 		.card-home {
 			background-color: black;
+			height: 400px;
+			padding: 30px;
+		}
+
+		.card-home img {
+			height: 340px;
 		}
 
 		.video-container {
