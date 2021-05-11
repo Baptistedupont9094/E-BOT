@@ -1,5 +1,93 @@
 {% extends 'layout.html.twig' %}
 
+{% block javascript %}
+	<script>
+		function moveToSelected(element) {
+
+			if (element == "next") {
+				var selected = $(".selected").next();
+			} else if (element == "prev") {
+				var selected = $(".selected").prev();
+			} else {
+				var selected = element;
+			}
+
+			var next = $(selected).next();
+			var prev = $(selected).prev();
+			var prevSecond = $(prev).prev();
+			var nextSecond = $(next).next();
+
+			$(selected).removeClass().addClass("selected");
+
+			$(prev).removeClass().addClass("prev");
+			$(next).removeClass().addClass("next");
+
+			$(nextSecond).removeClass().addClass("nextRightSecond");
+			$(prevSecond).removeClass().addClass("prevLeftSecond");
+
+			$(nextSecond).nextAll().removeClass().addClass('hideRight');
+			$(prevSecond).prevAll().removeClass().addClass('hideLeft');
+		}
+
+		// Eventos teclado
+		$(document).keydown(function (e) {
+			switch (e.which) {
+				case 37: // left
+					moveToSelected('prev');
+					break;
+
+				case 39: // right
+					moveToSelected('next');
+					break;
+
+				default:
+					return;
+			}
+			e.preventDefault();
+		});
+
+		$('#carousel div').click(function () {
+			moveToSelected($(this));
+		});
+
+		$('#prev').click(function () {
+			moveToSelected('prev');
+		});
+
+		$('#next').click(function () {
+			moveToSelected('next');
+		});
+
+		const playerButton = document.querySelector(".playerButton");
+		const player = document.querySelector(".player");
+
+		playerButton.addEventListener("click", function() {
+			player.classList.toggle("m-fade-in");
+			player.classList.toggle("m-fade-out");
+		});
+
+	</script>
+{% endblock %}
+
 {% block content %}
-    <h1>Hello Wilder !</h1>
+	<div class="container-fluid">
+		{% include "Component/_carousel.html.twig" %}
+
+		<div class="w-100 mx-auto p-0">
+			{% include "Component/_player.html.twig" %}
+		</div>
+
+		<h1 class="text-white">All movies</h1>
+
+		<div class="row mb-5">
+			{% for movie in 1..5 %}
+			{# {% for movie in movies %} #}
+				<div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4 hover07">
+					{% include "Component/_card.html.twig" %}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+
 {% endblock %}
