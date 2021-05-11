@@ -57,6 +57,15 @@
 		$('#next').click(function () {
 			moveToSelected('next');
 		});
+
+		const playerButton = document.querySelector(".playerButton");
+		const player = document.querySelector(".player");
+
+		playerButton.addEventListener("click", function() {
+			player.classList.toggle("m-fade-in");
+			player.classList.toggle("m-fade-out");
+		});
+
 	</script>
 {% endblock %}
 
@@ -64,9 +73,13 @@
 	<div class="container-fluid">
 		{% include "Component/_carousel.html.twig" %}
 
+		<div class="w-100 mx-auto p-0">
+			{% include "Component/_player.html.twig" %}
+		</div>
+
 		<h1 class="text-white">All movies</h1>
 
-		<div class="row">
+		<div class="row mb-5">
 			{% for movie in 1..5 %}
 			{# {% for movie in movies %} #}
 				<div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4 hover07">
@@ -75,5 +88,6 @@
 			{% endfor %}
 		</div>
 	</div>
+
 
 {% endblock %}
