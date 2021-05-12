@@ -30,7 +30,6 @@ class HomeController extends AbstractController
                         $error = $e->getMessage();
                         $user = [];
                     }
-                    
                     if (!empty($user) && $name === $user['name']) {
                         $_SESSION['user'] = $user;
                         header('Location: /explorer');

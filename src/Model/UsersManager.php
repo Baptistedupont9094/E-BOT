@@ -15,9 +15,9 @@ class UsersManager extends AbstractManager
         $statement->bindValue(":name", $name, PDO::PARAM_STR);
         $statement->execute();
         $result = $statement->fetch();
-        
+
         if ($result) {
-            return $result; 
+            return $result;
         } else {
             throw new Exception("Ce rover n'est pas encore sur Mars");
         }
