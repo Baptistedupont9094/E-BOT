@@ -58,14 +58,15 @@
 			moveToSelected('next');
 		});
 
-		const playerButton = document.querySelector(".playerButton");
+		const playerButtons = document.querySelectorAll(".playerButton");
 		const player = document.querySelector(".player");
 
-		playerButton.addEventListener("click", function() {
-			player.classList.toggle("m-fade-in");
-			player.classList.toggle("m-fade-out");
+		playerButtons.forEach(element => {
+			element.addEventListener("click", function() {
+				player.classList.toggle("m-fade-in");
+				player.classList.toggle("m-fade-out");
+			});
 		});
-
 	</script>
 {% endblock %}
 
