@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\UsersManager;
+use Exception;
 
 class HomeController extends AbstractController
 {
@@ -20,15 +21,21 @@ class HomeController extends AbstractController
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (!empty($_POST)) {
-                $name = $_POST['name'];
-                $userManager = new UsersManager();
-                $user = $userManager->selectOneByName($name);
-
-                if (!empty($user) && $name === $user['name']) {
-                    $_SESSION['user'] = $user;
-                    header('Location: /explorer');
+                if (!empty($_POST['name'])) {
+                    $name = $_POST['name'];
+                    $userManager = new UsersManager();
+                    try {
+                        $user = $userManager->selectOneByName($name);
+                    } catch (Exception $e) {
+                        $error = $e->getMessage();
+                        $user = [];
+                    }
+                    if (!empty($user) && $name === $user['name']) {
+                        $_SESSION['user'] = $user;
+                        header('Location: /explorer');
+                    }
                 } else {
-                    $error = "Ce rover n'est pas encore sur Mars";
+                    $error = "Veuillez entrez un nom d'utilisateur";
                 }
             }
         }
