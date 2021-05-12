@@ -20,13 +20,16 @@ class AccountController extends AbstractController
 
         if ((new AuthService())->isLogged()) {
             $session = $_SESSION['user'];
+            $sessionName = $_SESSION['user']['name'];
         } else {
+            $sessionName = "";
             $session = [];
         }
 
         return $this->twig->render('Account/index.html.twig', [
             'session' => $session,
-            'users' => $users
+            'users' => $users,
+            'sessionName' => $sessionName
         ]);
     }
 }
