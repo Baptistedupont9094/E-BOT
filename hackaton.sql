@@ -30,7 +30,7 @@ VALUES ("Archive", "sci-fi", "Gavin Rothery", "Theo James, Stacy Martin", "2020-
 ("I Am Mother", "thriller", "	Grant Sputore", "Clara Rugaard, Hilary Swank", "2019-01-25", "https://www.youtube.com/watch?v=N5BKctcZxrM", "IAmMother.jpeg"),
 ("Transformers", "sci-fi", "Michael Bay", "Peter Cullen, Shia LaBeouf", "2007-07-25", "https://www.youtube.com/watch?v=dxQxgAfNzyE", "transformers.jpeg"),
 ("Chappie", "sci-fi", "	Neill Blomkamp", "Sharlto Copley, Yolandi Visser", "2015-03-04", "https://www.youtube.com/watch?v=lyy7y0QOK-0", "Chappie.jpeg"),
-("Ex Machina", "sci-fi", "Alex Garland", "Oscar Isaac, Alicia Vikander", "2014-12-16", "https://www.youtube.com/watch?v=EoQuVnKhxaM", "ex-machina"),
+("Ex Machina", "sci-fi", "Alex Garland", "Oscar Isaac, Alicia Vikander", "2014-12-16", "https://www.youtube.com/watch?v=EoQuVnKhxaM", "ex-machina.jpeg"),
 ("A.I Artificial Intelligence", "sci-fi drama", "Steven Spielberg", "Haley Joel Osment, Jude Law", "2001-06-29", "https://www.youtube.com/watch?v=_19pRsZRiz4", "A-I.jpeg"),
 ("I,Robot", "sci-fi", "	Alex Proyas", "Will Smith, Alan Tudyk", "2004-07-28", "https://www.youtube.com/watch?v=7Dlo-VB0-HI", "i-robot.jpeg"),
 ("Star Wars", "sci-fantasy", "George Lucas", "Mark Hamill, Carrie Fisher", "1977-10-19", "https://www.youtube.com/watch?v=XHk5kCIiGoM", "star-wars.jpeg");

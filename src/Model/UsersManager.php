@@ -19,7 +19,7 @@ class UsersManager extends AbstractManager
         if ($result) {
             return $result;
         } else {
-            throw new Exception("Ce rover n'est pas encore sur Mars");
+            throw new Exception("This rover is not yet on Mars");
         }
     }
 }
