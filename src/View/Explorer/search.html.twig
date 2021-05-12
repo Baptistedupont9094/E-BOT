@@ -1,14 +1,31 @@
 {% extends 'layout.html.twig' %}
 
+{% block javascript %}
+	<script>
+		const playerButtons = document.querySelectorAll(".playerButton");
+		const player = document.querySelector(".player");
+
+		playerButtons.forEach(element => {
+			element.addEventListener("click", function() {
+				player.classList.toggle("m-fade-in");
+				player.classList.toggle("m-fade-out");
+			});
+		});
+	</script>
+{% endblock %}
+
 {% block content %}
-	<div class="container-fluid" style="min-height: calc(100vh - 241px);">
-	
+	<div class="container-fluid" style="min-height: calc(100vh - 233px);">
 		{% for movie in results %}
 
-			<div class="card mt-4 mb-4 ml-3 mr-3" style="max-width: 30vw;">
+			<div class="card mt-4 mb-4 mx-auto" style="max-width: 30vw;">
 				{% include 'Component/_card.html.twig' %}
 			</div>
 		{% endfor %}
+
+		<div class="w-100 mx-auto p-0">
+			{% include "Component/_player.html.twig" %}
+		</div>
 	</div>
 
 {% endblock %}

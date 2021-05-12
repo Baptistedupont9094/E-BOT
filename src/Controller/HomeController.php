@@ -35,7 +35,7 @@ class HomeController extends AbstractController
                         header('Location: /explorer');
                     }
                 } else {
-                    $error = "Veuillez entrez un nom d'utilisateur";
+                    $error = "Please enter a correct rover name";
                 }
             }
         }
