@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Model\MovieManager;
 use App\Service\AuthService;
+use App\Model\MovieManager;
 
 class ExplorerController extends AbstractController
 {
