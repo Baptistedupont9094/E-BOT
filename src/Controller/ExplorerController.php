@@ -38,7 +38,8 @@ class ExplorerController extends AbstractController
         }
 
         return $this->twig->render('Explorer/search.html.twig', [
-            'results' => $results
+            'results' => $results,
+            "sessionName" => $_SESSION['user']['name']
         ]);
     }
 }

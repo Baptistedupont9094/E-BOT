@@ -1,0 +1,49 @@
+{% block navbar %}
+
+	<nav class="navbar bg-none navbar-expand-lg navbar-light p-0">
+		<div class="container-fluid">
+            <a href="/home/index">
+			<img src="/assets/images/logo.png" style="font-size: 0.9em">
+            </a>
+			<form id='nav-element-mobile' method="POST" action="/explorer" class="search w-100 col-4 offset-2">
+				<input class="searchBar form-control" name="search" type="search" placeholder="Votre recherche" aria-label="Search" style="color:white;">
+			</form>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse p-0" id="navbarNav">
+				<div class="row w-100">
+					<ul class="navbar-nav w-100">
+						<li id='nav-element-desktop' class="nav-Explorer col-2 offset-2">
+							<a class="nav-link text-white" href="/explorer/index">Explorer</a>
+						</li>
+                        <li class="col-4 offset-2 p-0 pt-4">
+                            <span class="m-0" style="color:white; font-size:1.1em">WELCOME {{ sessionName }} !</span>
+                        </li>
+						<li id='nav-element-desktop' class="nav-Login-1 col-1 offset-1 p-0">
+							<a class="nav-link" href="/account/index">
+								<i class="far fa-user" style="color:white; font-size: 1.5em"></i>
+							</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<script>
+		document.querySelector('[name="search"]').addEventListener('keyup', event => {
+const searchValue = event.currentTarget.value;
+const form = new FormData();
+form.append('search', searchValue);
+fetch('/explorer/searchAjax', {
+method: 'POST',
+body: form
+}).then(response => response.text()).then(html => { // On met à jour le contenu du div search-result avec le html retourné par searchAjax
+document.querySelector('.search-result').innerHTML = html;
+});
+}, false);
+	</script>
+{% endblock %}
