@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Model\UsersManager;
+
 class HomeController extends AbstractController
 {
     /**
@@ -14,6 +16,25 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $error = '';
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (!empty($_POST)) {
+                $name = $_POST['name'];
+                $userManager = new UsersManager();
+                $user = $userManager->selectOneByName($name);
+
+                if (!empty($user) && $name === $user['name']) {
+                    $_SESSION['user'] = $user;
+                    header('Location: /explorer');
+                } else {
+                    $error = "Ce rover n'est pas encore sur Mars";
+                }
+            }
+        }
+
+        return $this->twig->render('Home/index.html.twig', [
+            'error' => $error,
+        ]);
     }
 }
