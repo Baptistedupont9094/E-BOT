@@ -1,20 +1,5 @@
-{# <section>
-
-<title>Bootstrap Theme Simply Me</title>
-<h3>Who Am I?</h3>
-<img url('https://cdn.discordapp.com/attachments/841595348140687373/841634318492631050/wall-e.jpeg');
-
-<h3>I'm an adventurer</h3>
-
-<div class="container-fluid">
-  <h3>Who Am I?</h3>
-  <img url('https://cdn.discordapp.com/attachments/841595348140687373/841634318492631050/wall-e.jpeg');
-  <h3>I'm an adventurer</h3>
-</div>
-
-</section> #}
-
 {% extends 'layout.html.twig' %}
+
 {% block content %}
 
 	<style>
@@ -42,21 +27,20 @@
 			<div class="aos-init" data-aos="fade-up">
 				<div class="container-fluid bg-1 text-center my-5 pb-4">
 					<h3>Who Am I?</h3>
-					<img src="assets/images/walle-top_0.jpg" class="img-circle" alt="wall-e" width="25%">
-					<h3>I'm an Wall-e</h3>
+					<img src="{{ "assets/images/" ~ session.url_image }}" class="img-circle" alt="wall-e" width="25%">
+					<h3>I'm {{ session.name }}</h3>
 				</div>
 			</div>
 			<div class="aos-init" data-aos="fade-up">
 				<div class="container-fluid bg-2 my-5 text-center">
-					<h3>What Am I?</h3
-					<p>LorLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					</p>
+					<h3>What Am I?</h3>
+					<p>{{ session.description }}</p>
 				</div>
 			</div>
 			<div class="aos-init" data-aos="fade-up">
 				<div class="container-fluid bg-3 my-5 text-center">
 					<h3>Where To Find Me?</h3>
-					<p>Lorem ipsum..</p>
+					<p>I am actually at : {{ session.location }} </p>
 				</div>
 			</div>
 		</div>
