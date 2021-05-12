@@ -12,7 +12,7 @@ class MovieManager extends AbstractManager
 
         return $this->pdo->query($query)->fetchAll();
     }
-    
+
     public function search(string $item): array
     {
         $query = '

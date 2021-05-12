@@ -5,7 +5,6 @@ namespace App\Controller;
 use App\Model\MovieManager;
 use App\Service\AuthService;
 
-
 class ExplorerController extends AbstractController
 {
     public function __construct()
