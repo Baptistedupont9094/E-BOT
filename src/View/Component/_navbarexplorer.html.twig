@@ -2,11 +2,11 @@
 
 	<nav class="navbar bg-none navbar-expand-lg navbar-light p-0">
 		<div class="container-fluid">
-            <a href="/home/index">
+            <a href="/">
 			<img src="/assets/images/logo.png" style="font-size: 0.9em">
             </a>
-			<form id='nav-element-mobile' method="POST" action="/explorer" class="search w-100 col-4 offset-2">
-				<input class="searchBar form-control" name="search" type="search" placeholder="Votre recherche" aria-label="Search" style="color:white;">
+			<form id='nav-element-mobile' method="POST" action="/explorer/search" class="search w-100 col-4 offset-1">
+				<input class="searchBar form-control mx-auto col-10" name="searchbar" type="search" placeholder="Votre recherche" aria-label="Search" style="color:white;">
 			</form>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -14,16 +14,19 @@
 
 			<div class="collapse navbar-collapse p-0" id="navbarNav">
 				<div class="row w-100">
-					<ul class="navbar-nav w-100">
-						<li id='nav-element-desktop' class="nav-Explorer col-2 offset-2">
-							<a class="nav-link text-white" href="/explorer/index">Explorer</a>
+					<ul class="navbar-nav w-100 d-flex justify-content-end align-items-middle">
+						<li id='nav-element-desktop' class="nav-Explorer col-2 mx-4">
+							<a class="nav-link text-white" href="/explorer">Explorer</a>
 						</li>
-                        <li class="col-4 offset-2 p-0 pt-4">
+						<li id='nav-element-desktop' class="nav-Explorer col-2 mx-4">
+							<a class="nav-link text-white" href="/account">My account</a>
+						</li>
+                        <li class="col-3 mx-4 p-0 pt-4">
                             <span class="m-0" style="color:white; font-size:1.1em">WELCOME {{ sessionName }} !</span>
                         </li>
-						<li id='nav-element-desktop' class="nav-Login-1 col-1 offset-1 p-0">
-							<a class="nav-link" href="/account/index">
-								<i class="far fa-user" style="color:white; font-size: 1.5em"></i>
+						<li id='nav-element-desktop' class="nav-Login-1 col-1 mx-4 p-0">
+							<a class="nav-link" href="/logout">
+								<i class="text-white bi bi-box-arrow-right" style="font-size: 2em;"></i>
 							</a>
 						</li>
 					</ul>

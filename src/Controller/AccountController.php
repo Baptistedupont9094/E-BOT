@@ -18,8 +18,14 @@ class AccountController extends AbstractController
         $usersManager = new UsersManager();
         $users = $usersManager->selectAll();
 
+        if ((new AuthService())->isLogged()) {
+            $session = $_SESSION['user'];
+        } else {
+            $session = [];
+        }
+
         return $this->twig->render('Account/index.html.twig', [
-            'session' => $_SESSION['user'],
+            'session' => $session,
             'users' => $users
         ]);
     }

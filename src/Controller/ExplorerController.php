@@ -19,9 +19,16 @@ class ExplorerController extends AbstractController
         $movies = $movieManager->selectAll();
         $moviesCarousel = $movieManager->getThreeRandom();
 
+        if ((new AuthService())->isLogged()) {
+            $sessionName = $_SESSION['user']['name'];
+        } else {
+            $sessionName = "";
+        }
+
         return $this->twig->render('Explorer/index.html.twig', [
             'movies' => $movies,
-            'moviesCarousel' => $moviesCarousel
+            'moviesCarousel' => $moviesCarousel,
+            "sessionName" => $sessionName
         ]);
     }
 
@@ -37,9 +44,15 @@ class ExplorerController extends AbstractController
             }
         }
 
+        if ((new AuthService())->isLogged()) {
+            $sessionName = $_SESSION['user']['name'];
+        } else {
+            $sessionName = "";
+        }
+
         return $this->twig->render('Explorer/search.html.twig', [
             'results' => $results,
-            "sessionName" => $_SESSION['user']['name']
+            "sessionName" => $sessionName
         ]);
     }
 }
