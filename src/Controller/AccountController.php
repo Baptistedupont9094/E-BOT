@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Model\UsersManager;
 use App\Service\AuthService;
 
 class AccountController extends AbstractController
@@ -14,6 +15,12 @@ class AccountController extends AbstractController
 
     public function index(): string
     {
-        return $this->twig->render('Account/index.html.twig');
+        $usersManager = new UsersManager();
+        $users = $usersManager->selectAll();
+
+        return $this->twig->render('Account/index.html.twig', [
+            'session' => $_SESSION['user'],
+            'users' => $users
+        ]);
     }
 }

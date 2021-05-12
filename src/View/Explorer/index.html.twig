@@ -80,8 +80,7 @@
 		<h1 class="text-white">All movies</h1>
 
 		<div class="row mb-5">
-			{% for movie in 1..5 %}
-			{# {% for movie in movies %} #}
+			{% for movie in movies %}
 				<div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4 hover07">
 					{% include "Component/_card.html.twig" %}
 				</div>
