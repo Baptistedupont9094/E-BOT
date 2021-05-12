@@ -1,12 +1,9 @@
 <?php
 
-
-
 namespace App\Controller;
 
 class LogoutController extends AbstractController
 {
-
     public function index()
     {
         // On supprime la session
