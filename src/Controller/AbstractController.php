@@ -13,6 +13,7 @@ namespace App\Controller;
 use Twig\Environment;
 use Twig\Extension\DebugExtension;
 use Twig\Loader\FilesystemLoader;
+use App\Service\AuthService;
 
 abstract class AbstractController
 {
@@ -35,5 +36,12 @@ abstract class AbstractController
             ]
         );
         $this->twig->addExtension(new DebugExtension());
+        /**
+         *  Class AuthService pour retourner la variable $_SESSION
+         *  Et pouvoir l'afficher dans le Twig avec condition.
+         */
+        $authService = new AuthService();
+        $this->twig->addGlobal('is_logged', $authService->isLogged());
+        $this->twig->addGlobal('user', $authService->getUser());
     }
 }

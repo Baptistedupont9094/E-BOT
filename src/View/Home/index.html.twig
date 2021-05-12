@@ -1,17 +1,25 @@
-{% extends 'layout.html.twig' %}
+{% extends 'layout2.html.twig' %}
 
 {% block content %}
 
 	<div class="d-flex  flex-column align-items-center justify-content-center" style="height: calc(68vh + 5px);">
 
 
-		<h1>laaaaaaaaalalallalalalalalalala</h1>
-		<p>Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour vous abonner ou réactiver votre abonnement.</p>
+		<h1>Lancement de la platforme</h1>
+		<p>Prêt à regarder E-BOT ? Saisissez votre adresse e-mail pour briser l'ennui sur mars.</p>
 
-		<div class="input-group col-4 mb-3">
+		{% if error %} 
+			<div class="alert text-alert">
+				<p> {{ error }} </p>
+			</div>
+		{% endif %}
+
+		<div class="input-group col-4 mb-3 d-block">
 			<div class="input-group-append ">
-			<input type="text" class="form-control">
-				<button class="btn btn-outline-secondary" type="button">Button</button>
+				<form method="POST">
+					<input name="name" type="text" class="form-control">
+					<button class="btn btn-outline-secondary" id="boutonrouge" type="submit">Get started ></button>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -29,29 +37,24 @@
 	</div>
 	<hr class="separator">
 
-	<div
-		class="card-home row mx-0">
-			<div class= "col-3">
-			</div>
-			<div class="col-3 mt-5 vertical-align-center">
-				<h5>Made by humans.</h5>
-				<h1>Made for robots</h1>
-			</div>
-			<div class="col-3">
-			<div class="col-2">
-			</div>
-				<img src="/assets/images/Terminator-face.png">
-			</div>
-			<div class="col-1">
-			</div>
+	<div class="card-home row mx-0">
+		<div class="col-3"></div>
+		<div class="col-3 mt-5 vertical-align-center">
+			<h5>Made by humans.</h5>
+			<h1>Made for robots</h1>
+		</div>
+		<div class="col-3">
+			<div class="col-2"></div>
+			<img src="/assets/images/Terminator-face.png">
+		</div>
+		<div class="col-1"></div>
 	</div>
 	<hr class="separator">
 
-	<div
-		class="card-home row mx-0">
-			<div class="col-3 offset-2">
-				<img src="/assets/images/android.png">
-			</div>
+	<div class="card-home row mx-0">
+		<div class="col-3 offset-2">
+			<img src="/assets/images/android.png">
+		</div>
 
 	</div>
 	<hr class="separator">
