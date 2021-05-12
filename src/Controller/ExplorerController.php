@@ -14,6 +14,8 @@ class ExplorerController extends AbstractController
 
     public function index(): string
     {
-        return $this->twig->render('Explorer/index.html.twig');
+        return $this->twig->render('Explorer/index.html.twig', [
+            "sessionName" => $_SESSION['user']['name']
+        ]);
     }
 }
