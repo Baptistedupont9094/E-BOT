@@ -2,11 +2,11 @@
 
 {% block content %}
 
-	<div class="d-flex  flex-column align-items-center justify-content-center" style="height: calc(83vh + 5px);">
+	<div class="d-flex  flex-column align-items-center justify-content-top" style="height: calc(83vh + 5px);">
 
 
 		<h1>Lancement de la platforme</h1>
-		<p>Prêt à regarder E-BOT ? Saisissez votre adresse e-mail pour briser l'ennui sur mars.</p>
+		<p>Prêt à regarder E-BOT ? Saisissez votre adresse e-mail pour briser l'ennui sur Mars.</p>
 
 		{% if error %} 
 			<div class="alert text-alert">
@@ -15,9 +15,9 @@
 		{% endif %}
 
 		<div class="input-group col-4 mb-3 d-block">
-			<div class="input-group-append ">
+			<div class="input-group-append justify-content-center">
 				<form method="POST">
-					<input name="name" type="text" class="form-control">
+					<input name="name" type="text" class="form-control" style="color:white;">
 					<button class="btn btn-outline-secondary" id="boutonrouge" type="submit">Get started ></button>
 				</form>
 			</div>

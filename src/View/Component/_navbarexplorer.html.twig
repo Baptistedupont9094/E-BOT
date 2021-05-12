@@ -1,30 +1,30 @@
 {% block navbar %}
 
-	<nav class="navbar bg-none navbar-expand-lg navbar-light">
+	<nav class="navbar bg-none navbar-expand-lg navbar-light p-0">
 		<div class="container-fluid">
             <a href="/home/index">
 			<img src="/assets/images/logo.png" style="font-size: 0.9em">
             </a>
 			<form id='nav-element-mobile' method="POST" action="/explorer" class="search w-100 col-4 offset-2">
-				<input class="searchBar form-control" name="search" type="search" placeholder="Votre recherche" aria-label="Search">
+				<input class="searchBar form-control" name="search" type="search" placeholder="Votre recherche" aria-label="Search" style="color:white;">
 			</form>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarNav">
+			<div class="collapse navbar-collapse p-0" id="navbarNav">
 				<div class="row w-100">
-					<ul class="navbar-nav w-100 align-middle">
-						<li id='nav-element-desktop' class="nav-Explorer col-1">
-							<a class="nav-link text-white" href="/explorer/index">Explorer<span class="sr-only"></a>
+					<ul class="navbar-nav w-100">
+						<li id='nav-element-desktop' class="nav-Explorer col-2 offset-2">
+							<a class="nav-link text-white" href="/explorer/index">Explorer</a>
 						</li>
-                        <li class="col-7 offset-1">
-                            <p class="m-0" style="color:white;">Welcome {{ sessionName }} on your session !</p>
+                        <li class="col-4 offset-2 p-0 pt-4">
+                            <span class="m-0" style="color:white; font-size:1.1em">WELCOME {{ sessionName }} !</span>
                         </li>
-						<li id='nav-element-desktop' class="nav-Login-1 col-1 offset-1">
-							<a class="nav-link" href="/login/index">
+						<li id='nav-element-desktop' class="nav-Login-1 col-1 offset-1 p-0">
+							<a class="nav-link" href="/account/index">
 								<i class="far fa-user" style="color:white; font-size: 1.5em"></i>
-								<span class="sr-only"></a>
+							</a>
 						</li>
 					</ul>
 

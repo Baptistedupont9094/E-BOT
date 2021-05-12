@@ -14,6 +14,8 @@ class AccountController extends AbstractController
 
     public function index(): string
     {
-        return $this->twig->render('Account/index.html.twig');
+        return $this->twig->render('Account/index.html.twig', [
+            "sessionName" => $_SESSION['user']['name']
+        ]);
     }
 }
