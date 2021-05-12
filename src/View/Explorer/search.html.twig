@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+	<div class="container-fluid" style="min-height: calc(100vh - 241px);">
+	
+		{% for movie in results %}
+
+			<div class="card mt-4 mb-4 ml-3 mr-3" style="max-width: 30vw;">
+				{% include 'Component/_card.html.twig' %}
+			</div>
+		{% endfor %}
+	</div>
+
+{% endblock %}
