@@ -38,7 +38,7 @@
 
 Le blog est déployé à ce [lien]()
 
-✤ <i>Ceci est le premier projet au sein de la Wild Code School Toulouse - Développeur web (Mai 2021)<i> <br>
+✤ <i> Wild Code School Toulouse - Développeur web (Mai 2021)<i> <br>
 
 
 ![E-bot Home](https://user-images.githubusercontent.com/77021375/118390674-9a661980-b630-11eb-9d38-ba74f3957207.png)
